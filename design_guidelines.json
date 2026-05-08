@@ -1,0 +1,118 @@
+{
+  "project_name": "SynCode AI",
+  "theme": "dark",
+  "archetype": "Swiss & High-Contrast mixed with Jewel & Luxury (High-End Terminal Aesthetic)",
+  "language": "es",
+  "brand_concept": "Synthesis + Code. A futuristic command center for multi-AI orchestration. Mixing editorial elegance with brutalist IDE precision.",
+  "global_typography": {
+    "headings": {
+      "family": "Cormorant Garamond, serif",
+      "weights": ["300", "400", "600", "700"],
+      "usage": "Hero headings, project titles, main section headers. Creates an elegant, human contrast against the cold tech.",
+      "letter_spacing": "tracking-tighter"
+    },
+    "body_ui": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["400", "500", "700"],
+      "usage": "Chat interface, sidebar navigation, system messages, code snippets, file structure."
+    },
+    "accent_labels": {
+      "family": "Outfit, sans-serif",
+      "weights": ["500", "700", "900"],
+      "usage": "Tiny overlines, AI names, ULTRA mode tag, primary CTA buttons. ALWAYS uppercase with wide tracking.",
+      "letter_spacing": "tracking-[0.2em]"
+    }
+  },
+  "color_palette": {
+    "background": {
+      "base": "#050505",
+      "panel": "#0D0D0D",
+      "elevated": "#171717",
+      "glass": "bg-white/5 backdrop-blur-2xl backdrop-saturate-150"
+    },
+    "text": {
+      "primary": "#F4F4F5",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B",
+      "inverse": "#050505"
+    },
+    "border": {
+      "default": "border-white/10",
+      "focus": "border-white/40",
+      "active": "border-white/80"
+    },
+    "ai_agents": {
+      "chatgpt": { "color": "#10A37F", "name": "ChatGPT" },
+      "copilot": { "color": "#007AFF", "name": "Copilot" },
+      "gemini": { "color": "#3B82F6", "name": "Gemini" },
+      "grok": { "color": "#F59E0B", "name": "Grok" },
+      "ultra": { "color": "#FFFFFF", "name": "ULTRA", "effect": "drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" }
+    }
+  },
+  "layout_architecture": {
+    "main_workspace": {
+      "structure": "3-column CSS Grid (sidebar | chat | live preview). Optional 4th technical panel on right.",
+      "left_sidebar": "w-64 border-r border-white/10 bg-[#050505] flex flex-col justify-between p-4",
+      "chat_column": "w-96 border-r border-white/10 bg-[#0D0D0D] flex flex-col relative",
+      "preview_column": "flex-1 bg-[#050505] p-4 relative overflow-hidden",
+      "technical_panel": "w-72 border-l border-white/10 bg-[#0D0D0D] p-4"
+    },
+    "corner_radius": {
+      "cards": "rounded-none",
+      "buttons": "rounded-none",
+      "inputs": "rounded-none",
+      "preview_iframe": "rounded-lg"
+    },
+    "spacing_system": "Dense for the IDE parts (gap-2, p-3), generous for the landing page (py-24, gap-12)."
+  },
+  "component_strategies": {
+    "buttons": "Flat background, 1px solid border. Hover state MUST explicitly change text color and background. No soft shadows. Example: bg-white text-black hover:bg-[#D4D4D8].",
+    "inputs_and_chat": "Input fields must use JetBrains Mono. 1px border-white/20, focus:border-white focus:ring-0. Chat bubbles should not look like iMessage; use brutalist rectangular blocks.",
+    "ai_selector_cards": "Grid of rectangular cards. When active, 1px border highlights in the AI's specific color (e.g., border-[#10A37F] for ChatGPT).",
+    "live_preview": "Rendered inside an iframe or a scaled div. It MUST have a white/light background to contrast with the dark IDE shell, making the 'created product' pop out.",
+    "file_upload_zone": "Dashed border-white/20 with a hover state of border-white. Display supported formats (Excel, PDF, JPG, ZIP) in tiny monospace uppercase.",
+    "system_messages": "Transparencia operativa ('analizando proyecto...', 'estructurando componentes...'). Use a typewriter effect or a blinking terminal cursor block '█'."
+  },
+  "motion_and_interactions": {
+    "hover_states": "Crisp and immediate. Translate-y is banned for IDE buttons. Use border color changes or background fill inversions.",
+    "chat_generation": "Staggered fade-in for AI messages. Skeleton loaders for code blocks.",
+    "ultra_mode_activation": "When toggled, trigger a visual 'boot-up' sequence. Subtle white glow across the UI borders, indicating all AIs are synchronized."
+  },
+  "media_and_assets": {
+    "icons_library": "phosphor-icons or lucide-react. Use sharp, unrounded variants where possible.",
+    "images": {
+      "landing_hero_bg": {
+        "url": "https://images.unsplash.com/photo-1762279389042-9439bfb6c155?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhcmslMjBmdXR1cmlzdGljJTIwdGVjaG5vbG9neSUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc4MjQ0NTUwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract neon digital landscape for the Landing Page hero background. Use with heavy bg-black/70 overlay.",
+        "category": "background"
+      },
+      "template_ecommerce": {
+        "url": "https://images.unsplash.com/photo-1720962158883-b0f2021fb51e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjBkYXNoYm9hcmQlMjB1aSUyMGRhcmt8ZW58MHx8fHwxNzc4MjQ0NTUxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Preview image for the E-commerce Template in the templates gallery.",
+        "category": "template_thumbnail"
+      },
+      "template_restaurant": {
+        "url": "https://images.unsplash.com/photo-1481487196290-c152efe083f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwd2Vic2l0ZSUyMGRlc2lnbiUyMHRlbXBsYXRlfGVufDB8fHx8MTc3ODI0NDUyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Preview image for the Restaurant Template in the templates gallery.",
+        "category": "template_thumbnail"
+      },
+      "template_dashboard": {
+        "url": "https://images.unsplash.com/photo-1771923082503-0a3381c46cef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxlY29tbWVyY2UlMjBkYXNoYm9hcmQlMjBVSSUyMGRhcmslMjBtb2RlfGVufDB8fHx8MTc3ODI0NDUyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Preview image for the Dashboard / SaaS Template.",
+        "category": "template_thumbnail"
+      }
+    }
+  },
+  "specific_page_instructions": {
+    "landing_page": "High visual impact. Use 'Cormorant Garamond' at massive scale (text-6xl+) for the hero text. Background should be the dark abstract tech image with a heavy vignette. Marquee ribbon showing 'SÍNTESIS EN TIEMPO REAL • MÚLTIPLES MODELOS • ARQUITECTURA ULTRA •'.",
+    "auth_pages": "Minimalist terminal style. Black background, centered square form. No cards, just pure grid borders.",
+    "workspace_chat": "User input at bottom, chat history above. Distinguish user messages (right-aligned, plain text) from AI messages (left-aligned, monospaced, colored border based on which AI responded).",
+    "workspace_preview": "This is the 'live' project. Wrap it in a container that looks like a browser window or a clean frame. Must have a 'Compare' button and 'Version History' dropdown in its header.",
+    "technical_panel": "Optional right sidebar. Show a mock file tree (JetBrains Mono, tiny text), dependency list, and real-time logs.",
+    "settings_page": "Bento grid layout for API keys, billing, and profile. Use strict grid lines."
+  },
+  "testing_and_accessibility": {
+    "contrast": "Ensure all text, especially monospace system messages, passes APCA contrast on the deep black background.",
+    "data_testids": "MANDATORY on all buttons, chat inputs, AI selector cards, template thumbnails, and navigation links. Use kebab-case."
+  }
+}
